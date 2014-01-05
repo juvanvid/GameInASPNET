@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<WebData>
+	<Welcome>
+		<div class="slovenian">
+			<h1 id="content_header">Predstavitev</h1>
+			<p>Pozdravljeni in dobrodosli v GameIn.</p>
+			<p>GameIn je internetna igra. Za dostop do igralniskega vmesnika se prosimo prvo prijavite, ali registrirajte.</p>
+			<p>Z registracijo boste dobili svoj profil in svojo igralnisko vsebino.</p>
+			<p>Po prijavi/registraciji lahko spremenite nastavitve svojega profila v "Account" zavihku.</p>
+			<p>Za dostop do igre kliknite zavihek "Game" ali zavihek "PLAY". Veliko uzitka!</p>
+		</div>
+		<div class="english">
+			<h1>Introduction</h1>
+			<p>Hello and Welcome to GameIn.</p>
+			<p>GameIn is a browser web game. To access the game content, please first login or register.</p>
+			<p>With registration, you will gain your own account and your game content.</p>
+			<p>After login/registration, you can change your account settings in "Account" tab.</p>
+			<p>To acces the game, click on "Game" tab or "PLAY" tab. Enjoy!</p>
+		</div>
+	</Welcome>
+</WebData>

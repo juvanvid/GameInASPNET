@@ -1,0 +1,73 @@
+#wrapper_top{
+	width: 1000px;
+	height: 104px;
+	border: 1px solid black;
+	background-image:url('../pics/Header/redStripe11.png');
+}
+
+#logoDiv{
+	width:200px;
+	float:left;
+	margin-left: 10px;
+	margin-top: 35px;
+}
+
+#userIoL{
+	margin-right: 5px;
+	margin-top: 10px;
+	
+	width: 600px;
+	height: auto;
+	
+	text-align: right;
+	
+	float:right;
+	clear: right;
+}
+
+#registerLink{
+	margin-top: 15px;
+
+	float:left;
+}
+#submitBox{
+	float:right;
+	
+	width: 60px;
+	height: 30px;
+
+	position:relative;
+	top:5px;
+	right:35px;
+}
+#infoBox{
+	float:right;
+	margin-bottom: 5px;
+}
+#infoBox1{
+	border: 1px solid black;
+	background: white;
+	padding-right: 50px;
+	padding-left: 10px;
+	float: right;
+}
+#infoBox2{
+	font: bold 26px Zurich;
+	color: white;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	padding-right: 55px;
+	padding-left: 10px;
+	padding-top: 24px;
+}
+
+#loginFormP2{
+	margin-right: 35px;
+}
+
+#nav_top{
+	margin-right: 5px;
+	margin-top: 10px;
+
+	float: right;
+	clear: right;
+}

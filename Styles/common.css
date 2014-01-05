@@ -1,0 +1,49 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+h1{
+	font: bold 30px Tahoma
+}
+h2{
+	font: bold 14px Tahoma
+}
+head, section, footer, aside, nav, article, hgroup, button, content{
+	display:block;
+}
+
+body{
+	text-align: center;
+	
+	background: #555;
+}
+
+a{
+	color: black;
+}
+ul{
+	list-style-type:none;
+}
+ul.inline li{
+	display:inline;
+}
+.inline{
+	display:inline;
+}
+
+.lowButton{
+	cursor: pointer;
+	text-decoration:underline;
+}
+
+#wrapper_all{
+	background: white;
+	width: 1000px;
+	border: 1px solid black;
+	margin:20px auto;
+}
+
+.slovenian{
+	display:none;
+}

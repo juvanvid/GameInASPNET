@@ -1,0 +1,12 @@
+#anim{
+	height:75px; 
+	width:1000px;
+	background: #000 url(background.jpg) repeat-y scroll left top;
+	text-align:center;
+}
+
+#anim2{
+	width:1000px;
+	height:75px;
+	background: transparent url(overlay.png) no-repeat scroll left top;
+}

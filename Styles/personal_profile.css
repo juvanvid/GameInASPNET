@@ -1,0 +1,32 @@
+
+#content{
+	padding-top: 10px;
+	border: 1px solid black;
+	background: #ddd;
+	height: 486px;
+}
+
+#PP_table{
+	margin: 20px 5px;
+	width: 700px;
+	border-spacing: 1px;
+}
+
+#PP_table tbody tr:nth-of-type(odd) {
+  background-color:#ccc;
+}
+
+#PP_table thead{
+	background-color: #222;
+	color: white;
+}
+
+#PP_table tfoot{
+	background-color: #222;
+	color: white;
+}
+
+td{
+	padding: 0px 5px;
+}
+

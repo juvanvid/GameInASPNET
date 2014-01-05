@@ -1,0 +1,299 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GameInASPNET.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>GameIn</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+
+<body>
+<form id="Form1" runat="server">
+
+	<div id="wrapper_all">
+		
+		<div id="wrapper_top">
+			
+			<div id="logoDiv">
+				<a>
+					
+				</a>
+			</div>
+			
+			<div id="userIoL">
+				<div id="userInfo">
+					<table>
+					
+					</table>
+					<div class="nametagIcon">
+					
+					</div>
+				</div>
+
+                <%if (!System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+                  { %>
+
+                    <div id="userLogin">
+		            <div id="registerLink">
+			            <a class="registerButton" href="./Register.aspx">REGISTER!</a>
+		            </div>
+                    <asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false">
+                        <LayoutTemplate>
+                            <div class="accountInfo">
+                                <div id="loginFormP1">
+                                    <p class="submitButtonn">
+                                        <div id="submitBox">
+                                            <asp:Button class="submitButton" ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="LoginUserValidationGroup"/>
+				                        </div>
+                                    </p>
+                                    <p>
+                                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Username:</asp:Label>
+                                        <asp:TextBox ID="UserName" runat="server" CssClass="textEntry"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" 
+                                             CssClass="failureNotification" ErrorMessage="User Name is required." ToolTip="User Name is required." 
+                                             ValidationGroup="LoginUserValidationGroup">*</asp:RequiredFieldValidator>
+                                    </p>
+                                    <p>
+                                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
+                                        <asp:TextBox ID="Password" runat="server" CssClass="passwordEntry" TextMode="Password"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" 
+                                             CssClass="failureNotification" ErrorMessage="Password is required." ToolTip="Password is required." 
+                                             ValidationGroup="LoginUserValidationGroup">*</asp:RequiredFieldValidator>
+                                    </p>
+                                </div>
+                                <div id="loginFormP2">
+                                    <p>
+                                        <a href="Recover.php?mode=password">Forgot your Password?</a>
+                                        <asp:CheckBox ID="RememberMe" runat="server"/>
+                                        <asp:Label ID="RememberMeLabel" runat="server" AssociatedControlID="RememberMe" CssClass="inline">Remember Me</asp:Label>
+                                    </p>
+                                </div>
+                                
+                            </div>
+                        </LayoutTemplate>
+                    </asp:Login>
+                    </div>
+                <% }
+                  else
+                  {%>
+
+                    <div id="userLogin">
+	                    <div id="registerLink">
+		                    <a class="registerButton" href="./Register.aspx">REGISTER!</a>
+	                    </div>
+	                    <div id="submitBox">
+		                    <a href="Logout.aspx" class="submitButton">Logout</a>
+	                    </div>
+	                    <div id="infoBox">
+		                    <div id="infoBox1">
+			                    You are logged in as: 
+		                    </div>
+		                    <div id="infoBox2">
+                                <asp:LoginName id="LoginName1" runat="server" FormatString ="{0}" />
+		                    </div>
+	                    </div>
+                    </div>
+
+
+                <%}%>
+				
+            </div>
+			
+			<div id="nav_top">
+				<ul class="inline">
+					<li id="nt_play" class>
+						<a class="menuButton" href="./Play.aspx" >PLAY!</a>
+					</li>
+					<li id="nt_home" class="dropdownSource">
+						<a class="menuButton" href="./welcome.aspx" >Home</a>
+						<ul>
+							<li>
+								<a href="./welcome.aspx">Welcome</a>
+							</li>
+							<li>
+								<a href="./Faq.aspx">FAQ</a>
+							</li>
+							<%--<li>
+								<a href="./Account/Login.aspx">Login</a>
+							</li> --%>
+							<li>
+								<a href="./Register.aspx">Register</a>
+							</li>
+						</ul>
+					</li>
+					<li id="nt_account" class="dropdownSource">
+						<a class="menuButton" href="./PersonalProfile.aspx" >Account</a>
+						<ul>
+							<li>
+								<a href="./PersonalProfile.aspx">Personal Profile</a>
+							</li>
+							<li>
+								<a href="">Display Options</a>
+							</li>
+						</ul>
+					</li>
+					<li id="nt_game" class="dropdownSource">
+						<a class="menuButton" href="./GameProfile.aspx" >Game</a>
+						<ul>
+							<li>
+								<a href="./GameProfile.aspx">Game Profile</a>
+							</li>
+							<li>
+								<a href="./Play.aspx">Play</a>
+							</li>
+						</ul>
+					</li>
+					<li id="nt_community" class="dropdownSource">
+						<a class="menuButton" href="" >Community</a>
+						<ul>
+							<li>
+								<a href="">Forum</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<div id="wrapper_middle">
+			<div id="wrapper_middleleft">
+				<div id="content">
+
+                <div class="main">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+                </div>
+
+                </div>
+			</div>
+			
+			<div id="wrapper_middleright">
+				<div id="wrapper_news">
+					<div id="news">
+						<h2>News</h2>
+						<ul class="redUl">
+							<li>9.10.
+								<ul class="blueUl">
+									<li>Started on this page</li>
+									<li>Layout designed</li>
+								</ul>
+							</li>
+							<li>12.10.
+								<ul class="blueUl">
+									<li>Menu tab created</li>
+								</ul>
+							</li>
+							<li>13.10.
+								<ul class="blueUl">
+									<li>Color scheme constructed</li>
+									<li>Coloring finished</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="wrapper_sponsor">
+					<div id="sponsor">
+						<img src="pics/Sponsor/sponsor.jpg" alt="">
+					</div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<div id="wrapper_bottom">
+			<footer>
+				<div id="anim">
+					<div id="anim2">
+						<div id="footer_left">
+							GameIn
+						</div>
+						<div id="footer_right">
+							<h2>Vid Juvan<br>63100171<br>juvanvid@gmail.com</h2>
+						</div>
+					</div>	
+				</div>
+			</footer>
+		
+		</div>
+	
+	</div>
+
+</form>
+</body>
+
+<script type="text/javascript" charset="utf-8">
+
+    var current = 0;
+    var imageHeight = 4433;
+    var headerHeight = 75;
+    var restartPosition = -(imageHeight - headerHeight);
+
+    function scrollBg() {
+        current -= 1;
+        if (current == restartPosition) {
+            current = 0;
+        }
+        $('#anim').css("background-position", "0 " + current + "px");
+    }
+    var init = setInterval("scrollBg()", 70);
+</script>	
+
+</html>
+
+
+
+
+
+
+
+
+<%--
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    My ASP.NET Application
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
+--%>

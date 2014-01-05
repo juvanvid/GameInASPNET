@@ -1,0 +1,23 @@
+#achvTableDiv{
+	border: 1px solid black;
+	height: 440px;
+	width: 690px;
+	overflow: auto;
+}
+
+#achvTable{
+	
+}
+
+.achvTableTdImg{
+
+}
+
+.achvTableTdDesc{
+	padding: 0px 10px;
+}
+
+.achvTableTdMap{
+	background-color: #111111;
+	color: white;
+}

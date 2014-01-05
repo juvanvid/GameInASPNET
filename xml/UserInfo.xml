@@ -1,0 +1,139 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<UserInfo>
+	<user>
+		<id>63100171</id>
+		<username>username</username>
+		<password>password</password>
+		<maps>
+			<map>
+				<name>Map1</name>
+				<location>maps/map1</location>
+				<state>Completed</state>
+				<time>00:01:05</time>
+				<achv>1</achv>
+				<unlocked>1</unlocked>
+				<achievements>
+					<achievement>
+						<name>Achv1</name>
+						<location>maps/map1/achv1</location>
+						<state>Earned</state>
+						<description>Complete the map in under a minute!</description>
+					</achievement>
+					<achievement>
+						<name>Achv2</name>
+						<location>maps/map1/achv2</location>
+						<state>Not Earned</state>
+						<description>Complete the map leaving nobody behind!</description>
+					</achievement>
+					<achievement>
+						<name>Achv3</name>
+						<location>maps/map1/achv2</location>
+						<state>Not Earned</state>
+						<description>Complete the map leaving nobody behind!</description>
+					</achievement>
+				</achievements>
+			</map>
+			<map>
+				<name>Map2</name>
+				<location>maps/map2</location>
+				<state>Not Completed</state>
+				<time>00:00:00</time>
+				<achv>0</achv>
+				<unlocked>1</unlocked>
+				<achievements>
+					<achievement>
+						<name>Achv1</name>
+						<location>maps/map2/achv1</location>
+						<state>Not Earned</state>
+						<description>Complete the map in under a minute!</description>
+					</achievement>
+					<achievement>
+						<name>Achv2</name>
+						<location>maps/map2/achv2</location>
+						<state>Not Earned</state>
+						<description>Complete the map leaving nobody behind!</description>
+					</achievement>
+				</achievements>
+			</map>
+			<map>
+				<name>Map3</name>
+				<location>maps/map3</location>
+				<state>Not Completed</state>
+				<time>00:00:00</time>
+				<achv>0</achv>
+				<unlocked>1</unlocked>
+				<achievements>
+					<achievement>
+						<name>Achv1</name>
+						<location>maps/map3/achv1</location>
+						<state>Not Earned</state>
+						<description>Complete the map in under a minute!</description>
+					</achievement>
+					<achievement>
+						<name>Achv2</name>
+						<location>maps/map3/achv2</location>
+						<state>Not Earned</state>
+						<description>Complete the map leaving nobody behind!</description>
+					</achievement>
+				</achievements>
+			</map>
+			<map>
+				<name>Map4</name>
+				<location>maps/map4</location>
+				<state>Not Completed</state>
+				<time>00:00:00</time>
+				<achv>0</achv>
+				<unlocked>1</unlocked>
+				<achievements>
+					<achievement>
+						<name>Achv1</name>
+						<location>maps/map4/achv1</location>
+						<state>Not Earned</state>
+						<description>Complete the map in under a minute!</description>
+					</achievement>
+					<achievement>
+						<name>Achv2</name>
+						<location>maps/map4/achv2</location>
+						<state>Not Earned</state>
+						<description>Complete the map leaving nobody behind!</description>
+					</achievement>
+				</achievements>
+			</map>
+		</maps>
+		<bosses>
+			<boss>
+				<name>Boss1</name>
+				<location>bosses/boss1</location>
+				<state>Completed</state>
+				<time>00:02:22</time>
+				<achv>0</achv>
+				<unlocked>1</unlocked>
+				<achievements>
+					<achievement>
+						<name>Achv1</name>
+						<location>maps/boss1/achv1</location>
+						<state>Not Earned</state>
+						<description>Kill the boss in under a minute!</description>
+					</achievement>
+				</achievements>
+			</boss>
+			<boss>
+				<name>Boss2</name>
+				<location>bosses/boss2</location>
+				<state>Not Completed</state>
+				<time>00:00:00</time>
+				<achv>0</achv>
+				<unlocked>1</unlocked>
+				<achievements>
+					<achievement>
+						<name>Achv1</name>
+						<location>maps/boss2/achv1</location>
+						<state>Not Earned</state>
+						<description>Kill the boss in under a minute!</description>
+					</achievement>
+				</achievements>
+			</boss>
+		</bosses>
+	</user>
+</UserInfo>

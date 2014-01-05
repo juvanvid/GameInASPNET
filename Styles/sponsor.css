@@ -1,0 +1,11 @@
+
+#wrapper_sponsor{
+	border: 1px solid black;
+	margin-top: 10px;
+	width: 250px;
+	height: 246px;
+	
+	padding: 10px 0px;
+	border-radius: 5px;
+	background: #ddd;
+}
